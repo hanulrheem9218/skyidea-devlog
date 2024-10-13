@@ -8,7 +8,7 @@ const Blank = () => {
 
     const datas:CardProps[] = [];
     for(let i = 0; i < 9; i++){
-        datas.push({title:`Project ${i}`,description:"Project description...",imgSrc:"../public/example.jpg", date: new Date("2024-10-13"), tags: ["c#", "c++"]});
+        datas.push({title:`Project ${i}`,description:"Project description...",imgSrc:"../example.jpg", date: new Date("2024-10-13"), tags: ["C#", "C++", "Personal"]});
     }
   return (
     <div>

@@ -19,9 +19,9 @@ const Card: React.FC<CardProps> = ({
         <p className="text -small">{description}</p>
         <p className="text -small">Date: {date?.toDateString()}</p>
       </div>
-      <ul>
+      <ul  className="tag-container">
         {tags?.map((value: string) => {
-          return <li>{value}</li>;
+          return <li className="text -small tag">{value}</li>;
         })}
       </ul>
     </div>
