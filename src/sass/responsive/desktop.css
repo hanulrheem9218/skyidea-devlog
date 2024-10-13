@@ -1,0 +1,6 @@
+@media screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=desktop.css.map */
