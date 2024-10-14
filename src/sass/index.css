@@ -89,6 +89,7 @@
   text-decoration: none;
 }
 .navbar.-list {
+  -webkit-user-drag: none;
   border-bottom: 1px white solid;
 }
 .navbar.-img {
