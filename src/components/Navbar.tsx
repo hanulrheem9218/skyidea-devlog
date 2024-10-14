@@ -14,7 +14,24 @@ const Navbar = () => {
         <source src="./ambient.mp3" type="audio/mpeg"/>
       </audio>
       <img className="navbar -img" src="/skyidea-white.svg" />
+      <audio id="audio-player" >
+        <source src="./ambient.mp3" type="audio/mpeg"/>
+      </audio>
+      <img className="navbar -img" src="/skyidea-white.svg" />
       <ul className="navbar text -small">
+        <li>
+           {speaker ?  <GiSpeakerOff onClick={toggle}/>: <GiSpeaker onClick={toggle}/>} 
+        </li>
+        <li>
+          <a className="navbar -list" href="/">
+            Personal
+          </a>
+        </li>
+        <li>
+          <a className="navbar -list" href="/">
+            Devlog
+          </a>
+        </li>
         <li>
            {speaker ?  <GiSpeakerOff onClick={toggle}/>: <GiSpeaker onClick={toggle}/>} 
         </li>
