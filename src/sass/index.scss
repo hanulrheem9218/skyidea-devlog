@@ -76,6 +76,7 @@
     text-decoration: none;
     &.-list {
         //color: black;
+        -webkit-user-drag: none;
         border-bottom: 1px white solid;
     }
     &.-img {
