@@ -1,10 +1,11 @@
 const Navbar = () => {
   return (
     <div className="navbar">
-        <p className="navbar -logo">Skyidea</p>
-      <ul className="navbar">
-        <li className="navbar -list"><a href="">Personal</a></li>
-        <li className="navbar -list"><a href="">Devlog</a></li>
+        <img className="navbar -img"src= "/skyidea-white.svg"/>
+     
+      <ul className="navbar text -small">
+        <li ><a className="navbar -list" href="/">Personal</a></li>
+        <li ><a className="navbar -list" href="/">Devlog</a></li>
       </ul>
     </div>
   );
