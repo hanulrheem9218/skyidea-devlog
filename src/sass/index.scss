@@ -51,15 +51,15 @@
         flex-direction: column;
         align-items: center;
     }
-    @media (min-width: $desktop){
-
-    }
-    @media(max-width: $mobile){
-       
-    }
 }
 .content-frame {
     width: 60%;
+    @media (min-width: $desktop){
+        width: 60%;
+    }
+    @media(max-width: $mobile){
+        width: 100%;
+    }
 }
 
 .content-paragraph{
