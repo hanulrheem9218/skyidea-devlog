@@ -1,13 +1,18 @@
 //responsiveness
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import "responsive/desktop.scss";
-@import "responsive/mobile.scss";
-
+@import './variables.scss';
 * {
     margin: 0px;
     background-color: #051015;
     color: #efefef;
+    @media (min-width: $desktop){
+
+    }
+    @media(max-width: $mobile){
+
+    }
 }
 .viewer-container {
     display: flex;
@@ -106,13 +111,19 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap:20px;
     grid-auto-rows: minmax(100px, 300px);
     //background-color: yellow;
 
     justify-items: center;
     padding: 10px;
+    @media (min-width: $desktop){
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media(max-width: $mobile){
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .footer {
