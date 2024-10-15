@@ -240,6 +240,7 @@
     @media (min-width: $desktop){
     }
     @media(max-width: $mobile){
+        width: 95%;
     }
     &:hover {
         padding:3px;
@@ -250,6 +251,7 @@
 .img-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100%;
     overflow: hidden;
 }
