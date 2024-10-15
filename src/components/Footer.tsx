@@ -5,11 +5,18 @@ import { SiVite } from "react-icons/si";
 const Footer = () => {
   return (
     <div className="footer">
-        <div>Developed with ...<SiVite color="white" /><SiTypescript color="white"/><FaSass color="white" /><FaReact color="white"/></div>
-        <div>"Skyidea's personal devlog"</div>
-        <div>?</div>
+      <ul className="footer-list">
+        <li className="footer-list-item">
+          Developed with ...
+          <SiVite color="white"size={20} style={{paddingRight:"10px"}}/>
+          <SiTypescript color="white" size={20} style={{paddingRight:"10px"}}/>
+          <FaSass color="white" size={20} style={{paddingRight:"10px"}}/>
+          <FaReact color="white" size={20} style={{paddingRight:"10px"}}/>
+        </li>
+        <li className="footer-list-item"> "Skyidea's personal devlog" </li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
