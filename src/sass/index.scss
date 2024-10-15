@@ -73,9 +73,12 @@
 }
 .navbar {
     display: flex;
+    position: sticky;
+    top:0px;
     padding: 4px;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
    // background-color: #cfecfc;
     list-style: none;
     text-decoration: none;
