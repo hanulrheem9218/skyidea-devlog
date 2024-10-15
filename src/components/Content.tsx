@@ -24,14 +24,14 @@ const Content: React.FC<ContentProps> = () => {
         {
           index: 1,
           paragraph:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n \n \n stellar blade.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n \n \n i worked with senior artist as a junior artist it was really valuable experience brah brah.",
         },
         {
           index: 2,
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           position: "left",
-          imgSrc: "/exampleDraw.jpg",
+          imgSrc: "/test01.png",
           imgDesc: `"Figure 1. example.jpg"`,
         },
         {
@@ -39,7 +39,7 @@ const Content: React.FC<ContentProps> = () => {
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           position: "right",
-          imgSrc: "/example.jpg",
+          imgSrc: "/test02.png",
           imgDesc: `"Figure 2. example.jpg"`,
         },
         {
@@ -47,7 +47,7 @@ const Content: React.FC<ContentProps> = () => {
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           position: "center",
-          imgSrc: "/example.jpg",
+          imgSrc: "/test03.png",
           imgDesc: `"Figure 3. example.jpg"`,
         },
         {
@@ -62,7 +62,7 @@ const Content: React.FC<ContentProps> = () => {
 
   return (
     <div className="content-container">
-      <p className="text -medium">Stellar blade</p>
+      <p className="text -medium">My Junior Artist Experience</p>
       {datas.map((value: ContentData) => {
         return (
           <div className={`content-item -${isMobile ? "center" :value.position}`}>

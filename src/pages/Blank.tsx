@@ -11,7 +11,7 @@ const Blank = () => {
   for (let i = 0; i < 10; i++) {
     datas.push({
       index: i,
-      title: `Game Developer ${i}`,
+      title: `My Junior Artist experience.. ${i}`,
       description: "what's game developer ? and who is it for",
       imgSrc: "../exampleDraw.jpg",
       date: new Date("2024-10-13"),

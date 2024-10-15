@@ -98,10 +98,10 @@
     transform: translate(-80px,80px);
 }
 .navbar {
-    opacity:  0.8;
     display: flex;
     position: sticky;
     top:0px;
+    gap:10px;
     padding: 4px;
     justify-content: space-between;
     align-items: center;
@@ -114,7 +114,6 @@
         flex-direction: column;
     }
     &.-list {
-        opacity: 1;
         -webkit-user-drag: none;
         border-bottom: 1px white solid;
         border-width: 1px;
@@ -130,7 +129,6 @@
         text-align: start;
     }
     &.-img {
-        opacity: 1;
         height: 40px;
     }
     @media (min-width: $desktop){
