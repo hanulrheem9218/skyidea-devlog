@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Blank = () => {
   const navigator = useNavigate();
   const datas: CardProps[] = [];
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 10; i++) {
     datas.push({
       index: i,
       title: `Game Developer ${i}`,
