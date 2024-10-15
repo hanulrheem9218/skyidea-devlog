@@ -45,8 +45,19 @@
   flex-direction: column;
   align-items: center;
 }
+
 .content-frame {
   width: 60%;
+}
+@media (min-width: 1024px) {
+  .content-frame {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .content-frame {
+    width: 100%;
+  }
 }
 
 .content-paragraph {
