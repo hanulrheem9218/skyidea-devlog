@@ -2,7 +2,9 @@ import { useState } from "react";
 import { isMobile } from "react-device-detect";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigator = useNavigate();
   const [open, setOpen] = useState(true);
   const toggle = () => {
     setOpen(!open);
@@ -12,13 +14,13 @@ const Navbar = () => {
       <audio id="audio-player">
         <source src="./ambient.mp3" type="audio/mpeg" />
       </audio>
-      <img className="navbar -img" src="/skyidea-white.svg" />
+      <img className="navbar -img" src="/skyidea-white.svg" onClick={()=>{navigator("/")}}/>
       {isMobile ? (
         <div className="navbar">
           {open ? (
-            <RxHamburgerMenu onClick={toggle} />
+            <RxHamburgerMenu onClick={toggle} size={35}/>
           ) : (
-            <MdClose onClick={toggle} />
+            <MdClose onClick={toggle} size={35}/>
           )}
           {open ? null : (
             <div className="navbar-menu">
