@@ -1,34 +1,52 @@
 import { useState } from "react";
-import { GiSpeaker, GiSpeakerOff } from "react-icons/gi";
+import { isMobile } from "react-device-detect";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdClose } from "react-icons/md";
 const Navbar = () => {
-  const [speaker,setSpeaker] = useState(false);
-  const audio = document.getElementById("audio-player") as HTMLAudioElement;
+  const [open, setOpen] = useState(true);
   const toggle = () => {
-    if(speaker && audio ) audio.play();
-    else audio.pause();
-    setSpeaker(!speaker)
+    setOpen(!open);
   };
   return (
     <div className="navbar">
-      <audio id="audio-player" >
-        <source src="./ambient.mp3" type="audio/mpeg"/>
+      <audio id="audio-player">
+        <source src="./ambient.mp3" type="audio/mpeg" />
       </audio>
       <img className="navbar -img" src="/skyidea-white.svg" />
-      <ul className="navbar text -small">
-        <li>
-           {speaker ?  <GiSpeakerOff onClick={toggle}/>: <GiSpeaker onClick={toggle}/>} 
-        </li>
-        <li>
-          <a className="navbar -list" href="/">
-            Personal
-          </a>
-        </li>
-        <li>
-          <a className="navbar -list" href="/">
-            Devlog
-          </a>
-        </li>
-      </ul>
+      {isMobile ? (
+        <div className="navbar">
+          {open ? (
+            <RxHamburgerMenu onClick={toggle} />
+          ) : (
+            <MdClose onClick={toggle} />
+          )}
+          {open ? null : (
+            <div className="navbar-menu">
+              <ul className="navbar -burger">
+                <li className="navbar -burger-list">
+                  <a href="/">Personal</a>
+                </li>
+                <li className="navbar -burger-list">
+                  <a href="/">Devlog</a>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+      ) : (
+        <ul className="navbar text -small">
+          <li>
+            <a className="navbar -list" href="/">
+              Personal
+            </a>
+          </li>
+          <li>
+            <a className="navbar -list" href="/">
+              Devlog
+            </a>
+          </li>
+        </ul>
+      )}
     </div>
   );
 };

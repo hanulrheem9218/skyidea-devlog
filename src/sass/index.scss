@@ -24,6 +24,12 @@
     justify-content: space-evenly;
     flex-direction: column;
     width: 60%;
+    @media (min-width: $desktop){
+
+    }
+    @media(max-width: $mobile){
+       width:95%;
+    }
 }
 .content-img {
     width: 100%;
@@ -39,6 +45,17 @@
     &.-right {
         justify-content: flex-end;
         flex-direction: row-reverse;
+    }
+    &.-center{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (min-width: $desktop){
+
+    }
+    @media(max-width: $mobile){
+       
     }
 }
 .content-frame {
@@ -71,6 +88,15 @@
         font-size: 32px;
     }
 }
+
+//navbar component
+.navbar-menu{
+
+    position: absolute;
+    width:100px;
+    height:100px;
+    transform: translate(-80px,80px);
+}
 .navbar {
     display: flex;
     position: sticky;
@@ -82,13 +108,27 @@
    // background-color: #cfecfc;
     list-style: none;
     text-decoration: none;
+    &.-burger{
+        position: relative;
+        flex-direction: column;
+    }
     &.-list {
-        //color: black;
         -webkit-user-drag: none;
         border-bottom: 1px white solid;
     }
+    &.-burger-list{
+        padding:5px;
+        text-align: start;
+    }
     &.-img {
         height: 40px;
+    }
+    @media (min-width: $desktop){
+        padding: 4px;
+    }
+    @media(max-width: $mobile){
+        flex-direction: row;
+        padding: 10px;
     }
 }
 
@@ -157,6 +197,13 @@
     // border: 1px solid white;
     width: 100%;
     height: 100%;
+    @media (min-width: $desktop){
+    }
+    @media(max-width: $mobile){
+        &:hover{
+            background-color:transparent;
+        }
+    }
     &:hover {
         background-color: rgb(55, 55, 55);
     }
@@ -166,6 +213,12 @@
     justify-content: center;
     width: 90%;
     overflow: hidden;
+    @media (min-width: $desktop){
+
+    }
+    @media(max-width: $mobile){
+        width: 90%;
+    }
 }
 .img {
     width: 100%;

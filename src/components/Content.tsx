@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 interface ContentProps {
   index?: number[];
@@ -64,7 +65,7 @@ const Content: React.FC<ContentProps> = () => {
       <p className="text -medium">Stellar blade</p>
       {datas.map((value: ContentData) => {
         return (
-          <div className={`content-item -${value.position}`}>
+          <div className={`content-item -${isMobile ? "center" :value.position}`}>
             {value.imgSrc === undefined && value.imgDesc === undefined ? (
               <p className="text -small content-paragraph">
                 {value.paragraph
