@@ -29,7 +29,7 @@ const Blank = () => {
             return (
               <Card
                 onClick={() => {
-                  navigator("viewer");
+                  navigator("/viewer");
                 }}
                 title={value.title}
                 description={value.description}

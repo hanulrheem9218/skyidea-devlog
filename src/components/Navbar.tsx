@@ -34,12 +34,16 @@ const Navbar:React.FC<NavBarProps> = ({isBlack}) => {
           {open ? null : (
              <div className="navbar -item-menu">
              <ul className="navbar -item-list">
-               <li className="navbar -item">
-                 <a className="navbar -item-text" href="/">Personal</a>
+               <li className="navbar -item" onClick={()=>{
+                navigator("/");
+               }}>
+                 <a className="navbar -item-text">Home</a>
                  <RiArrowRightSLine className="arrows"/>
                </li>
-               <li className="navbar -item">
-                 <a className="navbar -item-text" href="/devlog">Devlog</a>
+               <li className="navbar -item" onClick={()=>{
+                navigator("/devlog")
+               }}>
+                 <a className="navbar -item-text">Devlog</a>
                  <RiArrowRightSLine className="arrows"/>
                </li>
              </ul>

@@ -387,6 +387,7 @@
   box-shadow: none;
 }
 .navbar.-item {
+  cursor: pointer;
   padding: 0px;
   background-color: transparent;
   box-shadow: none;
