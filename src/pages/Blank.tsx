@@ -10,7 +10,7 @@ import ControlPanel from "../components/ControlPanel";
 const Blank = () => {
   const navigator = useNavigate();
   const datas: CardProps[] = [];
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     datas.push({
       index: i,
       title: `My Junior Artist experience.. ${i}`,

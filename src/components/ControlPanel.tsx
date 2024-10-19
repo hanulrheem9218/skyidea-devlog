@@ -1,10 +1,15 @@
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import Category from "./Category";
+import Archieve from "./Archieve";
 const ControlPanel = () => {
   return (
     <div className="control-panel">
       <div className="control-panel -container">
-        <div className="control-panel -controls">Items</div>
+        <div className="control-panel -controls">
+            <Category/>
+            <Archieve/>
+        </div>
         <ul className="control-panel -options">
           <li className="control-panel -list-option">
             <FaGithub size={20} className="control-icon"/>

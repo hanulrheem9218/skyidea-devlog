@@ -21,23 +21,25 @@ const Navbar = () => {
         }}
       />
       {isMobile ? (
-        <div className="navbar">
+        <div className="navbar -burger">
           {open ? (
-            <RxHamburgerMenu onClick={toggle} size={35} />
+            <RxHamburgerMenu onClick={toggle} size={30} style={{backgroundColor:"transparent"}}/>
           ) : (
-            <MdClose onClick={toggle} size={35} />
+            <MdClose onClick={toggle} size={30} style={{backgroundColor:"transparent"}}/>
           )}
           {open ? null : (
-            <div className="navbar-menu">
-              <ul className="navbar -burger">
-                <li className="navbar -burger-list">
-                  <a href="/">Personal</a>
-                </li>
-                <li className="navbar -burger-list">
-                  <a href="/">Devlog</a>
-                </li>
-              </ul>
-            </div>
+             <div className="navbar -item-menu">
+             <ul className="navbar -item-list">
+               <li className="navbar -item">
+                 <a className="navbar -item-text" href="/">Personal</a>
+                 <RiArrowRightSLine className="arrows"/>
+               </li>
+               <li className="navbar -item">
+                 <a className="navbar -item-text" href="/devlog">Devlog</a>
+                 <RiArrowRightSLine className="arrows"/>
+               </li>
+             </ul>
+           </div>
           )}
         </div>
       ) : (
@@ -67,7 +69,7 @@ const Navbar = () => {
                 <RiArrowRightSLine className="arrows"/>
               </li>
               <li className="navbar -item">
-                <a className="navbar -item-text" href="/">Devlog</a>
+                <a className="navbar -item-text" href="/devlog">Devlog</a>
                 <RiArrowRightSLine className="arrows"/>
               </li>
             </ul>
