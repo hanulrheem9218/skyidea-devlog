@@ -3,6 +3,8 @@ import { isMobile } from "react-device-detect";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import Searchbar from "./Searchbar";
+import { RiArrowRightSLine } from "react-icons/ri";
 const Navbar = () => {
   const navigator = useNavigate();
   const [open, setOpen] = useState(true);
@@ -11,16 +13,19 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <audio id="audio-player">
-        <source src="./ambient.mp3" type="audio/mpeg" />
-      </audio>
-      <img className="navbar -img" src="/skyidea-white.svg" onClick={()=>{navigator("/")}}/>
+      <img
+        className="navbar -img"
+        src="/skyidea-white.svg"
+        onClick={() => {
+          navigator("/");
+        }}
+      />
       {isMobile ? (
         <div className="navbar">
           {open ? (
-            <RxHamburgerMenu onClick={toggle} size={35}/>
+            <RxHamburgerMenu onClick={toggle} size={35} />
           ) : (
-            <MdClose onClick={toggle} size={35}/>
+            <MdClose onClick={toggle} size={35} />
           )}
           {open ? null : (
             <div className="navbar-menu">
@@ -36,18 +41,42 @@ const Navbar = () => {
           )}
         </div>
       ) : (
-        <ul className="navbar text -small">
-          <li>
-            <a className="navbar -list" href="/">
-              Personal
-            </a>
+        <>
+        <ul className="navbar -burger">
+          <li className="navbar -none">
+            <Searchbar />
+          </li>
+          <li className="navbar -burger-list">
+            {open ? (
+              <RxHamburgerMenu
+                onClick={toggle}
+                size={14}
+                style={{ backgroundColor: "transparent" }}
+              />
+            ) : (
+              <MdClose onClick={toggle} size={14}
+              style={{backgroundColor:"transparent"}} />
+            )}
           </li>
           <li>
-            <a className="navbar -list" href="/">
-              Devlog
-            </a>
+          {open ? null : (
+          <div className="navbar -item-menu">
+            <ul className="navbar -item-list">
+              <li className="navbar -item">
+                <a className="navbar -item-text" href="/">Personal</a>
+                <RiArrowRightSLine className="arrows"/>
+              </li>
+              <li className="navbar -item">
+                <a className="navbar -item-text" href="/">Devlog</a>
+                <RiArrowRightSLine className="arrows"/>
+              </li>
+            </ul>
+          </div>
+        )}
           </li>
         </ul>
+    
+        </>
       )}
     </div>
   );
