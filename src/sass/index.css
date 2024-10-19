@@ -19,8 +19,8 @@
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #4a4c4e;
-  border: 1px solid #303038;
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: background-color 0.5s, ease;
@@ -322,10 +322,12 @@
 }
 
 .content-container {
+  z-index: 2;
   display: flex;
   justify-content: space-evenly;
+  background-color: #303038;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
 }
 @media (max-width: 576px) {
   .content-container {
@@ -334,10 +336,16 @@
 }
 
 .content-img {
+  border-radius: 4px;
+  border: 1px solid #4a4c4e;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #534e4e;
   width: 100%;
 }
 
 .content-item {
+  z-index: 2;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -357,6 +365,7 @@
 }
 
 .content-frame {
+  background-color: transparent;
   width: 60%;
 }
 @media (min-width: 1024px) {
@@ -370,10 +379,23 @@
   }
 }
 
+.content-title {
+  padding: 20px;
+  background-color: transparent;
+}
+
 .content-paragraph {
+  background-color: #0e0e0e;
+  border-radius: 4px;
+  margin: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #4a4c4e;
   display: flex;
   width: 100%;
   padding: 5px;
+}
+.content-paragraph.text {
+  background-color: #0e0e0e;
 }
 
 .text {
@@ -461,6 +483,7 @@
   background-color: transparent;
   cursor: pointer;
   box-shadow: none;
+  padding: 6px;
   height: 25px;
   padding-left: 30px;
 }
@@ -471,10 +494,10 @@
 }
 .navbar.-item-menu {
   position: absolute;
-  transform: translate(-110px, 38px);
+  transform: translate(70px, 35px);
   width: 100px;
   height: auto;
-  padding: 4px;
+  padding: 6px;
   border-radius: 4px;
 }
 .navbar.-item-list {
@@ -529,7 +552,7 @@
   }
   .navbar.-item-menu {
     padding: 10px;
-    transform: translate(70px, 60px);
+    transform: translate(70px, 55px);
   }
 }
 

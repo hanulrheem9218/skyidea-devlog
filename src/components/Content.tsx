@@ -62,12 +62,12 @@ const Content: React.FC<ContentProps> = () => {
 
   return (
     <div className="content-container">
-      <p className="text -medium">My Junior Artist Experience</p>
+      <p className="content-title text -medium">My Junior Artist Experience</p>
       {datas.map((value: ContentData) => {
         return (
           <div className={`content-item -${isMobile ? "center" :value.position}`}>
             {value.imgSrc === undefined && value.imgDesc === undefined ? (
-              <p className="text -small content-paragraph">
+              <p className="text -small content-paragraph ">
                 {value.paragraph
                   .split("\n")
                   .map((line: string, index: number) => {

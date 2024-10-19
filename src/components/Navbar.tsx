@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosMenu } from "react-icons/io";
 import { MdClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { isMobile } from "react-device-detect";
 
 interface NavBarProps {
   isBlack?: boolean;
@@ -42,19 +41,19 @@ const Navbar: React.FC<NavBarProps> = ({ isBlack }) => {
           navigator("/");
         }}
       />
-      {isMobile ? (
+     
         <div className="navbar -burger" ref={navDivRef}>
          <Searchbar/>
           {open ? (
             <IoIosMenu
               onClick={toggle}
-              size={30}
+              size={`${!isMobile ? "18" : "30"}`}
               style={{ backgroundColor: "transparent" }}
             />
           ) : (
             <MdClose
               onClick={toggle}
-              size={30}
+              size={`${!isMobile ? "18" : "30"}`}
               style={{ backgroundColor: "transparent" }}
             />
           )}
@@ -83,49 +82,6 @@ const Navbar: React.FC<NavBarProps> = ({ isBlack }) => {
             </div>
           )}
         </div>
-      ) : (
-        <>
-          <ul className="navbar -burger">
-            <li className="navbar -none">
-              <Searchbar />
-            </li>
-            <li className="navbar -burger-list" onClick={toggle} ref={navLiRef}>
-              {open ? (
-                <RxHamburgerMenu
-                  size={14}
-                  style={{ backgroundColor: "transparent" }}
-                />
-              ) : (
-                <MdClose size={14} style={{ backgroundColor: "transparent" }} />
-              )}
-            </li>
-            <li>
-              {open ? null : (
-                <div className="navbar -item-menu">
-                  <ul className="navbar -item-list">
-                    <li className="navbar -item"  onClick={() => {
-                    navigator("/");
-                  }}>
-                      <p className="navbar -item-text">
-                        Home
-                      </p>
-                      <RiArrowRightSLine className="arrows" />
-                    </li>
-                    <li className="navbar -item" onClick={() => {
-                    navigator("/devlog");
-                  }}>
-                      <p className="navbar -item-text">
-                        Devlog
-                      </p>
-                      <RiArrowRightSLine className="arrows" />
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </li>
-          </ul>
-        </>
-      )}
     </div>
   );
 };
