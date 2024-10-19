@@ -61,11 +61,23 @@
 .video-title{
     background-color:  transparent;
     font-size: 4.0rem;
+    @media (min-width: $desktop) {
+        font-size: 4.0rem;
+    }
+    @media (max-width: $mobile) {
+        font-size: 3.0rem;
+    }
 }
 .video-paragraph{
     background-color: transparent;
     font-size: 1.4rem;
     margin-bottom: 20px;
+    @media (min-width: $desktop) {
+        font-size: 1.4rem;
+    }
+    @media (max-width: $mobile) {
+        font-size: 0.8rem;
+    }
 }
 .video-container{
     position: absolute;
@@ -74,7 +86,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 94%;
+    height:90%;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -83,6 +95,12 @@
     transform: scale(1.8);
     width: 80%;
     height:100%;
+    @media (min-width: $desktop) {
+        transform: scale(1.8);
+    }
+    @media (max-width: $mobile) {
+        transform: scale(8);
+    }
 }
 //archive
 .archive-container{
