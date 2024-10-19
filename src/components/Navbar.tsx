@@ -5,14 +5,18 @@ import { MdClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import { RiArrowRightSLine } from "react-icons/ri";
-const Navbar = () => {
+
+interface NavBarProps{
+  isBlack?:boolean;
+}
+const Navbar:React.FC<NavBarProps> = ({isBlack}) => {
   const navigator = useNavigate();
   const [open, setOpen] = useState(true);
   const toggle = () => {
     setOpen(!open);
   };
   return (
-    <div className="navbar">
+    <div className={ isBlack ? "navbar -black" :"navbar"}>
       <img
         className="navbar -img"
         src="/skyidea-white.svg"

@@ -4,7 +4,7 @@ import VideoPlayer from '../components/VideoPlayer'
 const Home = () => {
   return (
     <div className="home">
-        <Navbar/>
+        <Navbar isBlack={true}/>
         <VideoPlayer/>
     </div>
   )

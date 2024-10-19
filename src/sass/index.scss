@@ -11,6 +11,7 @@
     background-color: #00001f;
     font-family: "Barlow Condensed", sans-serif;
     color: #efefef;
+    scrollbar-color:  #303038 #0e0e0e;
     @media (min-width: $desktop) {
     }
     @media (max-width: $mobile) {
@@ -19,23 +20,32 @@
 //video player
 .video-icon{
     background-color: transparent;
-    transform: translate(-10px,2px);
+    transform: translate(15px,2px);
 }
 .video-button{
-    font-family: "Barlow Condensed",sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor:pointer;
+    //font-family: "Ubuntu",sans-serif;
     background-color: #4a4c4e;
-    border: 1px solid white;
-    border-radius: 4px;
+    border: 1px solid #303038;
+    border-radius: 2px;
+    box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: background-color 0.5s, ease;
     padding: 20px;
+    padding-left: 10px;
     padding-top:2px;
     padding-bottom: 3px;
-    font-weight: 100;
-    font-size: 1.1rem;
+    font-weight: 200;
+    font-size: 1.0rem;
     text-align: center;
 }
 .video-button:hover{
-    background-color: #120d5b;
+    border-bottom: 1px solid white;
+    background-color: #303038;
 }
 .video-options{
     position: absolute;
@@ -124,6 +134,7 @@
         
     }
     &.-list-option{
+        cursor: pointer;
         display: flex;
         align-items: center;
         height:40px;
@@ -303,12 +314,17 @@
     // background-color: #cfecfc;
     list-style: none;
     text-decoration: none;
+    &.-black{
+        background-color: black;
+    }
     &.-burger {
+        background-color: transparent;
         position: relative;
         box-shadow: none;
         flex-direction: row;
     }
     &.-list {
+        background-color: transparent;
         -webkit-user-drag: none;
         border-bottom: 1px white solid;
         border-width: 1px;
@@ -320,7 +336,8 @@
         }
     }
     &.-burger-list {
-       
+        background-color: transparent;
+        cursor:pointer;
         padding: 5px;
         box-shadow: none;
         text-align: start;
@@ -331,11 +348,14 @@
         }
     }
     &.-img {
+        background-color: transparent;
+        cursor:pointer;
         box-shadow: none;
         height: 25px;
         padding-left: 30px;
     }
     &.-none{
+        background-color: transparent;
         box-shadow: none;
         padding: 6px;
     }
@@ -517,6 +537,7 @@
     background-color:transparent;
 }
 .card-container {
+    cursor: pointer;
     z-index: 2;
     display: flex;
     //justify-content: center;
@@ -543,7 +564,6 @@
         width: 95%;
     }
     &:hover {
-        border-top: white 1px solid;
         border-bottom: white 1px solid;
     }
 }

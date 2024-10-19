@@ -1,8 +1,8 @@
-
+import { IoIosArrowDown } from "react-icons/io";
 const Category = () => {
   return (
     <div className="category-container">
-        <div className='category-container -title'>Category</div>
+        <div className='category-container -title'><IoIosArrowDown className="arrows"/>Category</div>
         <ul className="tag-container">
             <li className="tag">Personal</li>
             <li className="tag">About Life</li>

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { IoMdDocument } from "react-icons/io";
+import { RiArrowDropRightLine } from "react-icons/ri";
 const VideoPlayer = () => {
     const navigator = useNavigate();
   return (
@@ -11,7 +11,7 @@ const VideoPlayer = () => {
       <div className="video-description">
         <h3 className="video-title">Welcome.</h3>
         <p className="video-paragraph">Skyidea's Official Game Devlog Website.</p>
-        <button onClick={() => {navigator("/devlog")}} className="video-button"><IoMdDocument  className="video-icon"/>Devlog</button>
+        <button onClick={() => {navigator("/devlog")}} className="video-button">View<RiArrowDropRightLine size={18} className="video-icon"/></button>
       </div>
       
     </div>
