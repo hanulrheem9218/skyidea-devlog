@@ -5,6 +5,10 @@ import { SiVite } from "react-icons/si";
 const Footer = () => {
   return (
     <div className="footer">
+      <div className="background-container">
+        <img className="background-img" src="/background.png" />
+      </div>
+       <div className="footer-copyright">© Hanul Rheem 2024</div>
       <div className="footer-description">
          <p className="footer-develop">
            Developed With
@@ -18,7 +22,6 @@ const Footer = () => {
           <FaReact color="white" size={20} className="footer-icon"/>
         </li>
       </ul>
-      <div className="footer-copyright">© Hanul Rheem 2024</div>
     </div>
   );
 };

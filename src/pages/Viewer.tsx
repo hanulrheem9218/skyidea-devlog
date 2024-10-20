@@ -13,9 +13,6 @@ const Viewer: React.FC<ViewerProps> = () => {
         <Content />
       </div>
       <Footer/>
-      <div className="background-container">
-        <img className="background-img" src="/background.png" />
-      </div>
     </div>
   );
 };
