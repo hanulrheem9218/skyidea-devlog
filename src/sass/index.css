@@ -17,7 +17,7 @@
 .video-button {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   cursor: pointer;
   background-color: transparent;
   border: 1px solid white;
@@ -31,6 +31,23 @@
   font-weight: 200;
   font-size: 1rem;
   text-align: center;
+  margin: auto;
+  margin-left: 0px;
+}
+@media (min-width: 1024px) {
+  .video-button {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 576px) {
+  .video-button {
+    justify-content: center;
+    padding: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    font-size: 1.2rem;
+    margin: auto;
+  }
 }
 
 .video-button:hover {
@@ -48,12 +65,22 @@
      -moz-user-select: none;
           user-select: none;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
   width: 50%;
   z-index: 2;
   background-color: transparent;
 }
+@media (max-width: 576px) {
+  .video-description {
+    bottom: 40px;
+  }
+}
 
 .video-title {
+  display: flex;
+  justify-content: flex-start;
   background-color: transparent;
   font-size: 4rem;
 }
@@ -64,11 +91,14 @@
 }
 @media (max-width: 576px) {
   .video-title {
-    font-size: 3rem;
+    justify-content: center;
+    font-size: 5rem;
   }
 }
 
 .video-paragraph {
+  display: flex;
+  justify-content: flex-start;
   background-color: transparent;
   font-size: 1.4rem;
   margin-bottom: 20px;
@@ -80,6 +110,8 @@
 }
 @media (max-width: 576px) {
   .video-paragraph {
+    margin-bottom: 80px;
+    justify-content: center;
     font-size: 0.8rem;
   }
 }

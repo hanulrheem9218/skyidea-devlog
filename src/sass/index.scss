@@ -25,7 +25,7 @@
 .video-button{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     cursor:pointer;
     //font-family: "Ubuntu",sans-serif;
     background-color: transparent;
@@ -42,6 +42,19 @@
     font-weight: 200;
     font-size: 1.0rem;
     text-align: center;
+    margin: auto;
+    margin-left: 0px;
+    @media (min-width: $desktop) {
+        justify-content: flex-end;
+    }
+    @media (max-width: $mobile) {
+        justify-content: center;
+        padding: 40px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        font-size: 1.2rem;
+        margin: auto;
+    }
 }
 .video-button:hover{
     border-bottom: 1px solid white;
@@ -54,21 +67,34 @@
 .video-description{
     user-select: none;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
     width: 50%;
     z-index: 2;
     background-color: transparent;
+    @media (min-width: $desktop) {
+    }
+    @media (max-width: $mobile) {
+     bottom: 40px;
+    }
 }
 .video-title{
+    display: flex;
+    justify-content: flex-start;
     background-color:  transparent;
     font-size: 4.0rem;
     @media (min-width: $desktop) {
         font-size: 4.0rem;
     }
     @media (max-width: $mobile) {
-        font-size: 3.0rem;
+        justify-content: center;
+        font-size: 5.0rem;
     }
 }
 .video-paragraph{
+    display: flex;
+    justify-content: flex-start;
     background-color: transparent;
     font-size: 1.4rem;
     margin-bottom: 20px;
@@ -76,6 +102,8 @@
         font-size: 1.4rem;
     }
     @media (max-width: $mobile) {
+        margin-bottom: 80px;
+        justify-content: center;
         font-size: 0.8rem;
     }
 }
