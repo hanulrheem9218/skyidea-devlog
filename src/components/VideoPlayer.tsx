@@ -5,7 +5,7 @@ const VideoPlayer = () => {
   return (
     <div className="video-container">
       <video className="video" autoPlay muted playsInline >
-        <source src="homepage.mp4" type="video/mp4" />
+        <source src="intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="video-description">
